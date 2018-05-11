@@ -1,10 +1,14 @@
 # bdm-notebook-demo
 ## Combining data from multiple locations
-In this demo we'll show how BDM Notebook can be used for working with **data stored in multiple locations** - in this case on `hdfs` and in `MySQL` database.
+In this tutorial, we'll demonstrate how you can use Oracle Big Data Manager Notebook to work with **data stored in multiple locations** such as the edges.csv file on `hdfs` and the USERS `MySQL` database table. 
 
 ### About the data
-_Disclaimer: This dataset is completely artificial, it has been generated programatically based on arbitrary input_
+_Disclaimer: This dataset is completely artificial. It has been generated programatically based on some arbitrary input_
 
-The `USERS` table contains records about a students's name, his/her id and a label called category. Value in the 'category' column dependens on which one of 2 classes he/she attends. The `edges.csv` file on the other hand contains records about user connections - each row contains 2 student ids of the students coworking on a project.
+The `USERS` table contains records about each student name, id, and class category. A value of class_0 in the 'category' column indicates that the student is attending class 0 whereas a value of class_1 indicates that the sudent is attending class 1.  
 
-Students are allowed to find a colleague for their project not just in the same class they attend, but also in the other class. We'll use this dataset to get an idea about how frequent such cross-class colaborations are.
+The `edges.csv` file contains many rows (records). Each row contains two columns. Each column represents a student id. The two student ids represent two students who are collaborating on a specific class project. 
+
+We use the `USERS` MySQL database table to lookup the names of the student ids and which classes they attended: class_0 or class_1. 
+
+We'll use this dataset to get an idea how frequent such cross-class colaborations are. 
